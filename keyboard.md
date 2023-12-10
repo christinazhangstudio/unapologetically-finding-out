@@ -45,13 +45,36 @@ though there are some things that seem to make sense about its layout, primarily
 it's not too difficult to get one's wpm up of course, but when linguistic path dependencies are 
 sufficiently (re)fresh, my intuition is that Dvorak follows a more idealized order for the click clacks.
 
+..+
+
 now a scan code is a set of codes that determine when a key is pressed or repeated, or released.
 
 typically, a PC keyboard itself uses scan code set 2 
-and the keyboard (i8042) controller losslessly converts this to scan code 1 to provide to the OS.
+and the keyboard (i8042) controller losslessly converts this to scan code set 1 to provide to the OS.
 
 this was so that new keyboard designs can be created without breaking compatability 
-with MS-DOS apps that read raw scancodes from the keyboard.
+with MS-DOS apps (targeted for x86) that read raw scancodes from the keyboard.
+
+a scan code is a sequence of 1 or more bytes -- can be up to 6 for something like the "pause" key!
+
+but it might be possible to convert these into a single integer which can make use of lookup tables..
+
+when the keyboard driver's state machine ACKs (0xFA) a complete scan code
+(that is, having passed states such as "waiting for scan code after break code", "got first byte,
+waiting for second byte of scan code", etc.), the scan code is converted into a symbolic key code
+and up/down key state (to determine wheter the key is being currently pressed). 
+
+thereafter, the key code and state are converted into unicode/ascii characters according to the
+`keyboard layout` -- which requires loading in different "key mapping" tables.
+
++..
+
+so creating a simple driver for handling PC keyboards (scan code set 1 + 2) for a Dvorek layout
+could be a neat idea! and even passing all this into a GUI for toggleability..
+
+
+
+
 
 
 
