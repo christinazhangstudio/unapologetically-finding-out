@@ -7,3 +7,6 @@ and then i messed up because just when i > haha yis i shall rededicate sum time 
 and go out and do thing learn thing
 and then the sudden terror strikes in my heart
 that the 1 0s were g o n e
+and this was all just a sick joke of planned obsolescence
+but i actually have better theories
+and as such i will be pursuing my interests.
