@@ -69,8 +69,7 @@ thereafter, the key code and state are converted into unicode/ascii characters a
 
 +..
 
-so creating a simple driver for handling PC keyboards (scan code set 1 + 2) for a Dvorek layout
-could be a neat idea! and even passing all this into a GUI for toggleability..
+so creating a simple driver for handling PC keyboards (scan code set 1 + 2) for a Dvorek layout yes
 
 
 
