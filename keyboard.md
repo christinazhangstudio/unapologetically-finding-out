@@ -28,9 +28,9 @@ sc config i8042prt start=disabled
 [SC] ChangeServiceConfig SUCCESS
 ```
 
-which worked, but also got me thinking about keyboards.
+which worked
 
-## keyboards
+## k e y b o a r d s
 
 the QWERTY (or QWERTZ for my European friends) is the de facto standard keyboard. 
 BUT there is another -- the Dvorak layout, a more ergonomic and efficient evolution of typing, 
@@ -42,12 +42,12 @@ though there are some things that seem to make sense about its layout, primarily
 - common letter combinations are typed with the same finger, like "e" and "d"
 - many common letter combinations are only typed with one hand e.g. "wasde" permuations!
 
-it's not too difficult to get one's wpm up of course, but when linguistic path dependencies are 
-sufficiently (re)fresh, my intuition is that Dvorak follows a more idealized order for the click clacks.
+when one's linguistic path dependencies are 
+sufficiently (re)fresh, Dvorak conceptually follows a more idealized order for the click clacks.
 
 ..+
 
-now a scan code is a set of codes that determine when a key is pressed or repeated, or released.
+a scan code is a set of codes that determine when a key is pressed or repeated, or released.
 
 typically, a PC keyboard itself uses scan code set 2 
 and the keyboard (i8042) controller losslessly converts this to scan code set 1 to provide to the OS.
